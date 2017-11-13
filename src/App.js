@@ -1,22 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Media from 'react-responsive'
-import Loadable from 'react-loadable';
+import Loadable from 'react-loadable'
 
 const Loading = () => {
-  return <div>Loading...</div>;
-};
-
+  return <div>Loading...</div>
+}
 
 const LoadableMobileApp = Loadable({
   loader: () => import('./mobile'),
-  loading: Loading,
-});
+  loading: Loading
+})
 
 const LoadableDesktopApp = Loadable({
   loader: () => import('./desktop'),
-  loading: Loading,
-});
-
+  loading: Loading
+})
 
 class App extends Component {
   render() {
@@ -29,8 +27,8 @@ class App extends Component {
           <LoadableDesktopApp />
         </Media>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

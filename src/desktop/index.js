@@ -7,6 +7,6 @@ export default class DesktopApp extends React.Component {
       <div>
         <h1>Desktop View</h1>
       </div>
-    );
+    )
   }
 }
