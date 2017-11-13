@@ -11,8 +11,8 @@ const LoadableMobileApp = Loadable({
   loading: Loading
 })
 
-const LoadableDesktopApp = Loadable({
-  loader: () => import('./desktop'),
+const LoadableDefaultApp = Loadable({
+  loader: () => import('./default'),
   loading: Loading
 })
 
@@ -20,11 +20,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Media query={'(max-device-width: 699px)'}>
+        <Media query={'(max-device-width: 767px)'}>
           <LoadableMobileApp />
         </Media>
-        <Media query={'(min-device-width: 700px)'}>
-          <LoadableDesktopApp />
+        <Media query={'(min-device-width: 768px)'}>
+          <LoadableDefaultApp />
         </Media>
       </div>
     )
