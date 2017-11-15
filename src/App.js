@@ -7,12 +7,12 @@ const Loading = () => {
 }
 
 const LoadableMobileApp = Loadable({
-  loader: () => import('./mobile'),
+  loader: () => import(/* webpackChunkName: "/mobile" */ './mobile'),
   loading: Loading
 })
 
 const LoadableDefaultApp = Loadable({
-  loader: () => import('./default'),
+  loader: () => import(/* webpackChunkName: "/default" */ './default'),
   loading: Loading
 })
 
