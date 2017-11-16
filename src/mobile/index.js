@@ -1,11 +1,20 @@
 import React from 'react'
+import { View, Text, StyleSheet } from 'react-native'
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
+})
 
 export default class MobileApp extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Mobile View</h1>
-      </div>
+      <View style={styles.container}>
+        <Text>Mobile View</Text>
+      </View>
     )
   }
 }
