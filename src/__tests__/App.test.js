@@ -1,13 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from '../App'
+import { MobileApp, DesktopApp } from '../App'
 
-it('renders without crashing', () => {
+it('Desktop App renders without crashing', () => {
   const div = document.createElement('div')
-  ReactDOM.render(<App />, div)
+  ReactDOM.render(<DesktopApp />, div)
 })
 
-it('renders correctly', () => {
-  const wrapper = shallow(<App />)
+it('DesktopApp renders correctly', () => {
+  const wrapper = shallow(<DesktopApp />)
+  expect(wrapper).toMatchSnapshot()
+})
+
+it('Mobile App renders without crashing', () => {
+  const div = document.createElement('div')
+  ReactDOM.render(<MobileApp />, div)
+})
+
+it('Mobile App renders correctly', () => {
+  const wrapper = shallow(<MobileApp />)
   expect(wrapper).toMatchSnapshot()
 })
