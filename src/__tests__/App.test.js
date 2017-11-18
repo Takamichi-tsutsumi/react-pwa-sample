@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { MobileApp, DesktopApp } from '../App'
+import { shallow } from 'enzyme'
 
 it('Desktop App renders without crashing', () => {
   const div = document.createElement('div')
