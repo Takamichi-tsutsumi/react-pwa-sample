@@ -5,6 +5,8 @@ import { AppRegistry } from 'react-native'
 import './index.css'
 import { DesktopApp, MobileApp } from './App'
 
+import { registerServiceWorker } from './registerServiceWorker'
+
 if (window.innerWidth < 767) {
   AppRegistry.registerComponent('MobileApp', () => MobileApp)
   AppRegistry.runApplication('MobileApp', {
@@ -14,15 +16,4 @@ if (window.innerWidth < 767) {
   ReactDOM.render(<DesktopApp />, document.getElementById('root'))
 }
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker
-      .register('/sw.js')
-      .then(registration => {
-        console.log('SW registered: ', registration)
-      })
-      .catch(registrationError => {
-        console.log('SW registration failed: ', registrationError)
-      })
-  })
-}
+registerServiceWorker()
