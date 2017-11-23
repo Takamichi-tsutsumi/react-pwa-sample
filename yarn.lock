@@ -5609,6 +5609,10 @@ react-native-web@^0.1.14:
     prop-types "^15.6.0"
     react-timer-mixin "^0.13.3"
 
+react-network@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-network/-/react-network-1.0.1.tgz#f169dbaf00216e100c14fc89542bb2e0efc59769"
+
 react-responsive@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/react-responsive/-/react-responsive-3.0.0.tgz#26e895dbdf748d4473c76cf46d29cb9d824e02ec"
